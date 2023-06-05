@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    transition: all .3s;
+}
+
+.opaque {
+    background: #2c2c2c;
+}
+
+.header .logo {
+    color: #fff;
+    font-size: 2.1em;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.redirect {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .logo:hover {
+    transform: scale(1.05);
+}
+
+
+.header .navigation {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    gap: 25px;
+}
+
+.header .navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+}
+
+.header .navigation a::before {
+    content: "";
+    width: 100%;
+    border-radius: 5px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transform: scale(0);
+    transform-origin: right;
+    bottom: -2px;
+    background: #00eaff;
+    box-shadow: 0px 0px 150px 34px rgba(99,255,242,1);
+    transition: transform .5s;
+}
+
+.header .navigation a:hover::before {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.violet {
+    color: #00eaff;
+}
+
+
+/* ---- Showcase ---- */
+
+.showcase {
+    background: url("https://losbarrios.es/wp-content/uploads/2015/03/lbaerea2.jpg");
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 50% 100%, 0 80%);
+    position: relative;
+}
+
+.showcase::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.title {
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 2px;
+    transition: all .2s;
+}
+
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ---- Datos ---- */
+
+.datos {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+
+.circle {
+    position: absolute;
+    background: #00eaff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 150px;
+    height: 150px;
+    top: 650px;
+    left: 480px;
+}
+
+.circle-2 {
+    top: 1150px;
+    left: 60px;
+}
+
+.circle-3 {
+    width: 80px;
+    height: 80px;
+    top: 550px;
+    left: 800px;
+}
+
+.circle-4 {
+    top: 750px;
+    left: 900px;
+    height: 200px;
+    width: 200px;
+}
+
+.circle-5 {
+    height: 210px;
+    width: 210px;
+    top: 150px;
+    left: 1480px;
+}
+
+.circle-6 {
+    height: 110px;
+    width: 110px;
+    top: 1150px;
+    left: 1480px;
+}
+
+
+.datos-title {
+    font-size: 1.2em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.datos-subtitle {
+    font-size: 4em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.datos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    padding: 100px;
+}
+
+.datos-section-img {
+    border-radius: 20px;
+    width: 100%;
+    height: 320px;
+}
+
+.datos-section-img-poblation {
+    background: url("https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_1280.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-section-title {
+    font-size: 2em;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.datos-section {
+    font-family: "Poppinst", sans-serif;
+    font-weight: 500;
+    display: flex;
+    padding: 20px;
+    flex-flow: column nowrap;
+    gap: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.datos-section-img-city {
+    background: url("https://www.mundotoro.com/wp-content/uploads/2020/04/Pueblo_o_ciudad.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-section-img-economy {
+    background: url("https://gogreen.com.do/wp-content/uploads/2022/09/foto-actividad-economia..jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-section-img-nata {
+    background: url("https://concepto.de/wp-content/uploads/2015/03/natalidad-e1549653260924.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-section-img-mort {
+    background: url("https://concepto.de/wp-content/uploads/2019/04/mortalidad-1-e1556073644608.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-section-img-dens {
+    background: url("https://concepto.de/wp-content/uploads/2019/03/densidad-de-poblacion-e1554066732122.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---- Planos ---- */
+ 
+.planos .svg{
+    transform: translateY(5px);
+}
+
+.planos-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #2c2c2c;
+    padding: 70px 70px 100px 70px;
+    gap: 50px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.planos-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.planos-img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.planos-title {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.circle {
+    display: none;
+}
+
+.planos-text {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.planos-btn {
+    margin-top: 20px;
+}
+
+.datos-comparation {
+    background: #2c2c2c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 70px;
+    overflow: hidden;
+}
+
+.datos-comparation-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.datos-comparation-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.datos-comparation-section .datos-comparation-text-content {
+    margin-top: 20px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.datos-comparation-section .datos-comparation-text-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.datos-comparation-title {
+    font-size: 3.2em;
+}
+
+/* ---- Analize ---- */
+
+.analize {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    font-family: "Poppins", sans-serif;
+}
+
+.analize-img-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analize-img-section img {
+    width: 700px;
+    margin-bottom: 50px;
+}
+
+.analize-text-content h2 {
+    text-align: center;
+    font-size: 3.2em;
+}
+
+.analize-text-content {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+/* ---- Problems ----- */
+
+.problems {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    padding: 70px;
+}
+
+.problems-title {
+    font-size: 3.2em;
+}
+
+.problems-section-container {
+    margin-top: 50px;
+    display: grid;
+    gap: 70px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.problems i {
+    font-size: 7em;
+}
+
+.problems-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.problems-section h2 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* ---- Turismo ---- */
+
+.turismo-section {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 70px;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.turismo-section h2 {
+    display: block;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.turismo-section .turismo-section-img-container {
+    width: 50%;
+    height: 50%;
+}
+
+.turismo-section .turismo-section-img-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+.turismo-section .turismo-section-img-container img:hover {
+    transform: scale(0.9);
+}
+
+.turismo-title {
+    font-size: 3.2em;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-oculted {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 1000;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1100px) {
+    .datos-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .analize-text-content p {
+        font-size: 10px;
+    }
+
+    .planos-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .problems-section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .datos-comparation {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    
+}
